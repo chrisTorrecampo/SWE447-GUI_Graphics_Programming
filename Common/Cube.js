@@ -20,8 +20,8 @@ function Cube( vertexShaderId, fragmentShaderId ) {
         values : new Float32Array([
             0.0, 0.0, 0.0,  //Vertex 0
             1.0, 0.0, 0.0,  //Vertex 1
-            1.0, 1.0, 0.0,  //Vertex 2
-            0.0, 1.0, 0.0,  //Vertex 3           
+            1.0, 1.0, 1.0,  //Vertex 2
+            0.0, 1.0, 1.0  //Vertex 3           
         ]),
         numComponents : 3
     };
