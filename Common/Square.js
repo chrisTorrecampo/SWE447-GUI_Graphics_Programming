@@ -27,10 +27,10 @@ function Square(gl, vertexShaderId, fragmentShaderId) {
 	
 	this.colors = {
 	    values : new Float32Array([
-		 1.0, 1.0, 0.0,  //vColor 0
-		 1.0, 1.0, 0.0,  //vColor 1
-		 1.0, 1.0, 0.0,  //vColor 2
-		 1.0, 1.0, 0.0,  //vColor 3
+		 1.0, 0.0, 0.0,  //vColor 0
+		 1.0, 0.0, 0.0,  //vColor 1
+		 1.0, 0.0, 0.0,  //vColor 2
+		 1.0, 0.0, 0.0,  //vColor 3
 	    ]),
 	    numComponents : 3
 	};
