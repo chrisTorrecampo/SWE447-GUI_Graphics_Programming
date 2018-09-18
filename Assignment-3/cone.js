@@ -11,9 +11,9 @@ function init() {
         return;
     }
 
-    gl.clearColor( 1.0, 0.3, 0.1, 1.0 );
+    gl.clearColor( 1.0, 1.0, 0.0, 1.0 );
     
-    cone = new Cone( gl, n );
+    cone = new Cone( gl, 100 );
     
     render();
 }
