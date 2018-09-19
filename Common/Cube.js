@@ -1,4 +1,3 @@
-
 function Cube( vertexShaderId, fragmentShaderId ) {
 
     // Initialize the shader pipeline for this object using either shader ids
@@ -25,13 +24,13 @@ function Cube( vertexShaderId, fragmentShaderId ) {
             0.0, 1.0, 0.0,   //Vertex 03
             
             //Face 2
-            0.0, 1.0, 0.0,   //Vertex 04
+            0.0, 0.0, 1.0,   //Vertex 04
             1.0, 1.0, 0.0,   //Vertex 05
             1.0, 1.0, 1.0,   //Vertex 06
             0.0, 1.0, 1.0,   //Vertex 07
             
             //Face 3
-            0.0, 0.0, 1.0,   //Vertex 08
+            0.0, 0.0, 1.0,  //Vertex 08
             1.0, 0.0, 1.0,  //Vertex 09
             1.0, 1.0, 1.0,  //Vertex 10
             0.0, 1.0, 1.0,  //Vertex 11
@@ -59,12 +58,12 @@ function Cube( vertexShaderId, fragmentShaderId ) {
     
     this.indices = { 
         values : new Uint16Array([
-            0, 1, 3, 2,     //Face 1
-            4, 5, 7, 6,     //Face 2
-            8, 9, 11, 10,   //Face 3
-            12, 13, 15, 14, //Face 4
-            16, 17, 19, 18, //Face 5
-            20, 21, 23, 22  //Face 6
+            0, 1, 2, 0, 2, 3,	    //Face 1
+            4, 5, 6, 4, 6, 7,   	//Face 2
+            8, 9, 10, 8, 10, 11,  	//Face 3
+            12, 13, 14, 12, 14, 15, //Face 4
+            16, 17, 18, 16, 18, 19, //Face 5
+            20, 21, 22, 20, 22, 23  //Face 6
         ])
     };
     this.indices.count = this.indices.values.length;
