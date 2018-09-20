@@ -89,9 +89,9 @@ function Cube( vertexShaderId, fragmentShaderId ) {
 	    1.0, 1.0, 0.0,  //Vertex 19
 		
 	    //Face 6 (Right)- Purple	
-	    1.0, 1.0, 1.0,  //Vertex 20    
-	    1.0, 1.0, 1.0,  //Vertex 21
-            1.0, 1.0, 1.0,  //Vertex 22
+	    1.0, 0.1, 0.9,  //Vertex 20    
+	    1.0, 0.1, 0.9,  //Vertex 21
+            1.0, 0.1, 0.9,  //Vertex 22
 	    1.0, 0.1, 0.9   //Vertex 23
         ]),
 	numComponents : 3
