@@ -17,51 +17,51 @@ function Cube( vertexShaderId, fragmentShaderId ) {
 
     this.positions = { 
         values : new Float32Array([
-            //Face 1
+             //Face 1 (Front) X
             0.0, 0.0, 0.0,   //Vertex 00
-            1.0, 0.0, 0.0,   //Vertex 01
-            1.0, 1.0, 0.0,   //Vertex 02
-            0.0, 1.0, 0.0,   //Vertex 03
+            0.5, 0.0, 0.0,   //Vertex 01
+            0.5, 0.5, 0.0,   //Vertex 02
+            0.0, 0.5, 0.0,   //Vertex 03
             
-            //Face 2
-            0.0, 0.0, 1.0,   //Vertex 04
-            1.0, 1.0, 0.0,   //Vertex 05
-            1.0, 1.0, 1.0,   //Vertex 06
-            0.0, 1.0, 1.0,   //Vertex 07
+            //Face 2 (Back) X
+            0.5, 0.0, 0.5,   //Vertex 04
+            0.0, 0.0, 0.5,   //Vertex 05
+            0.0, 0.5, 0.5,   //Vertex 06
+            0.5, 0.5, 0.5,   //Vertex 07
             
-            //Face 3
-            0.0, 0.0, 1.0,  //Vertex 08
-            1.0, 0.0, 1.0,  //Vertex 09
-            1.0, 1.0, 1.0,  //Vertex 10
-            0.0, 1.0, 1.0,  //Vertex 11
+            //Face 3 (Top) X
+            0.0, 0.5, 0.0,  //Vertex 08
+            0.5, 0.5, 0.0,  //Vertex 09
+            0.5, 0.5, 0.5,  //Vertex 10
+            0.0, 0.5, 0.5,  //Vertex 11
             
-            //Face 4
+            //Face 4 (Bottom)
             0.0, 0.0, 0.0,  //Vertex 12
-            1.0, 0.0, 0.0,  //Vertex 13
-            1.0, 0.0, 1.0,  //Vertex 14
-            0.0, 0.0, 1.0,  //Vertex 15
+            0.5, 0.0, 0.0,  //Vertex 13
+            0.5, 0.0, 0.5,  //Vertex 14
+            0.0, 0.0, 0.5,  //Vertex 15
             
-            //Face 5
-            1.0, 0.0, 0.0,  //Vertex 16
-            1.0, 0.0, 1.0,  //Vertex 17
-            1.0, 1.0, 1.0,  //Vertex 18
-            1.0, 1.0, 0.0,  //Vertex 19
+            //Face 5 (Left)
+            0.0, 0.0, 0.5,  //Vertex 16
+            0.0, 0.0, 0.0,  //Vertex 17
+            0.0, 0.5, 0.0,  //Vertex 18
+            0.0, 0.5, 0.5,  //Vertex 19
             
-            //Face 6
-            0.0, 0.0, 1.0,  //Vertex 20
-            0.0, 0.0, 0.0,  //Vertex 21
-            0.0, 1.0, 0.0,  //Vertex 22
-            0.0, 1.0, 1.0   //Vertex 23
+            //Face 6 (Right) X
+            0.5, 0.0, 0.0,  //Vertex 20
+            0.5, 0.0, 0.5,  //Vertex 21
+            0.5, 0.5, 0.5,  //Vertex 22
+            0.5, 0.5, 0.0   //Vertex 23
         ]),
         numComponents : 3
     };
-    
+		   
     this.indices = { 
         values : new Uint16Array([
             0, 1, 2, 0, 2, 3,	    //Face 1
             4, 5, 6, 4, 6, 7,   	//Face 2
             8, 9, 10, 8, 10, 11,  	//Face 3
-            12, 13, 14, 12, 14, 15, //Face 4
+            13, 12, 14, 14, 12, 15, //Face 4
             16, 17, 18, 16, 18, 19, //Face 5
             20, 21, 22, 20, 22, 23  //Face 6
         ])
