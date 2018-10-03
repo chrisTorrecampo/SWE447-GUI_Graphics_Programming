@@ -18,16 +18,16 @@ var gl;
 
 var Planets = {
   Sun : undefined,
-  // Mercury : undefined,
-  // Venus : undefined,
-  // Earth : undefined,
-  // Moon : undefined,
-  // Mars : undefined,
-  // Jupiter : undefined,
-  // Saturn : undefined,
-  // Uranus : undefined,
-  // Neptune : undefined,
-  // Pluto : undefined
+  Mercury : undefined,
+  Venus : undefined,
+  Earth : undefined,
+  Moon : undefined,
+  Mars : undefined,
+  Jupiter : undefined,
+  Saturn : undefined,
+  Uranus : undefined,
+  Neptune : undefined,
+  Pluto : undefined
 };
 
 // Viewing transformation parameters
@@ -136,6 +136,7 @@ function render() {
 
   ms.push();
   ms.scale(data.radius);
+  
   gl.useProgram(planet.program);
   gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
   gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
@@ -146,6 +147,186 @@ function render() {
   //
   //  Add your code for more planets here!
   //
+  
+  //Mercury
+  name = "Mercury";
+  planet = Planets[name];
+  data = SolarSystem[name];
+  planet.PointMode = false;
+  
+  ms.push();
+  ms.rotate(1/data.year * time, [0, 0, 1]);
+  ms.translate(data.distance, 0, 0);  
+  ms.scale(data.radius);
+  
+  gl.useProgram(planet.program);
+  gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
+  gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
+  gl.uniform4fv(planet.uniforms.color, flatten(data.color));
+  planet.render();
+  ms.pop();
+  
+  //Venus
+  name = "Venus";
+  planet = Planets[name];
+  data = SolarSystem[name];
+  planet.PointMode = false;
+  
+  ms.push();
+  ms.rotate(1/data.year * time, [0, 0, 1]);
+  ms.translate(data.distance, 0, 0);  
+  ms.scale(data.radius);
+  
+  gl.useProgram(planet.program);
+  gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
+  gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
+  gl.uniform4fv(planet.uniforms.color, flatten(data.color));
+  planet.render();
+  ms.pop();
+  
+  //Earth
+  name = "Earth";
+  planet = Planets[name];
+  data = SolarSystem[name];
+  planet.PointMode = false;
+  
+  ms.push();
+  ms.rotate(1/data.year * time, [0, 0, 1]);
+  ms.translate(data.distance, 0, 0);
+  ms.scale(data.radius);
+  
+  gl.useProgram(planet.program);
+  gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
+  gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
+  gl.uniform4fv(planet.uniforms.color, flatten(data.color));
+  planet.render();  
+  
+  //Moon
+  name = "Moon";
+  planet = Planets[name];
+  data = SolarSystem[name];
+  planet.PointMode = false;
+  
+  ms.push();  
+  ms.rotate(1/data.year * time, [0, 0, 1]);
+  ms.translate(data.distance, 0, 0);
+  ms.scale(data.radius);
+  
+  gl.useProgram(planet.program);
+  gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
+  gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
+  gl.uniform4fv(planet.uniforms.color, flatten(data.color));
+  planet.render();
+  ms.pop();	//Pop Moon
+  ms.pop();	//Pop Earth
+  
+  //Mars
+  name = "Mars";
+  planet = Planets[name];
+  data = SolarSystem[name];
+  planet.PointMode = false;
+  
+  ms.push();
+  ms.rotate(1/data.year * time, [0, 0, 1]);
+  ms.translate(data.distance, 0, 0);  
+  ms.scale(data.radius);
+  
+  gl.useProgram(planet.program);
+  gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
+  gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
+  gl.uniform4fv(planet.uniforms.color, flatten(data.color));
+  planet.render();
+  ms.pop();
+  
+  //Jupiter
+  name = "Jupiter";
+  planet = Planets[name];
+  data = SolarSystem[name];
+  planet.PointMode = false;
+  
+  ms.push();
+  ms.rotate(1/data.year * time, [0, 0, 1]);
+  ms.translate(data.distance, 0, 0);  
+  ms.scale(data.radius);
+  
+  gl.useProgram(planet.program);
+  gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
+  gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
+  gl.uniform4fv(planet.uniforms.color, flatten(data.color));
+  planet.render();
+  ms.pop();
+  
+  //Saturn
+  name = "Saturn";
+  planet = Planets[name];
+  data = SolarSystem[name];
+  planet.PointMode = false;
+  
+  ms.push();
+  ms.rotate(1/data.year * time, [0, 0, 1]);
+  ms.translate(data.distance, 0, 0);  
+  ms.scale(data.radius);
+  
+  gl.useProgram(planet.program);
+  gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
+  gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
+  gl.uniform4fv(planet.uniforms.color, flatten(data.color));
+  planet.render();
+  ms.pop();
+  
+  //Uranus
+  name = "Uranus";
+  planet = Planets[name];
+  data = SolarSystem[name];
+  planet.PointMode = false;
+  
+  ms.push();
+  ms.rotate(1/data.year * time, [0, 0, 1]);
+  ms.translate(data.distance, 0, 0);  
+  ms.scale(data.radius);
+  
+  gl.useProgram(planet.program);
+  gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
+  gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
+  gl.uniform4fv(planet.uniforms.color, flatten(data.color));
+  planet.render();
+  ms.pop();
+  
+  //Neptune
+  name = "Neptune";
+  planet = Planets[name];
+  data = SolarSystem[name];
+  planet.PointMode = false;
+  
+  ms.push();
+  ms.rotate(1/data.year * time, [0, 0, 1]);
+  ms.translate(data.distance, 0, 0);  
+  ms.scale(data.radius);
+  
+  gl.useProgram(planet.program);
+  gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
+  gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
+  gl.uniform4fv(planet.uniforms.color, flatten(data.color));
+  planet.render();
+  ms.pop();
+  
+  //Pluto
+  name = "Pluto";
+  planet = Planets[name];
+  data = SolarSystem[name];
+  planet.PointMode = false;
+  
+  ms.push();
+  ms.rotate(1/data.year * time, [0, 0, 1]);
+  ms.translate(data.distance, 0, 0);  
+  ms.scale(data.radius);
+  
+  gl.useProgram(planet.program);
+  gl.uniformMatrix4fv(planet.uniforms.MV, false, flatten(ms.current()));
+  gl.uniformMatrix4fv(planet.uniforms.P, false, flatten(P));
+  gl.uniform4fv(planet.uniforms.color, flatten(data.color));
+  planet.render();
+  ms.pop();
 
   window.requestAnimationFrame(render);
 }
@@ -161,7 +342,7 @@ function resize() {
 
   gl.viewport(0, 0, w, h);
 
-  var fovy = 100.0; // degrees
+  var fovy = 110.0; // degrees
   var aspect = w / h;
 
   P = perspective(fovy, aspect, near, far);
