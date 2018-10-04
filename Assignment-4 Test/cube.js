@@ -10,6 +10,9 @@ var yAxis = [0, 1, 0];
 var speed = 5;
 var canvas;
 
+var lastMouseX = null;
+var lastMouseY = null;
+
 function init() {
   var canvas = document.getElementById( "webgl-canvas" );
 
@@ -42,6 +45,19 @@ function init() {
 	  speed = 0 + event.srcElement.value * .10;
   }
   
+  document.onmousemove = function handleMouseMove(event){
+	  var newX = event.clientX;
+	  var newY = event.clientY;
+	  
+	  var deltaX = newX - lastMouseX;
+	  var deltaY = newY - lastMouseY;
+	  
+	  angle = degToRad(deltaX + deltaY) * Math.PI * 5;
+	  
+	  lastMouseX = newX;
+	  lastMouseY = newY;	  
+  }
+  
   document.onkeydown = function() {
 	  switch(event.which || event.KeyCode) { 
 		  case 70 : speed += .1; break;
@@ -53,10 +69,14 @@ function init() {
   render();
 }
 
+function degToRad(degrees){
+	  return degrees * Math.PI / 180;
+	  }
+
 function render() {
   gl.clear( gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT );
 
-  angle += 2.0; // degrees
+  //angle += 2.0; // degrees
 
   //cube.MV = rotate( angle, [1, 1, 0] );
   cube.MV = rotate(speed * angle, rotationAxis);
