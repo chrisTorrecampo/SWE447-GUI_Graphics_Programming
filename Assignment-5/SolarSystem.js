@@ -1,7 +1,7 @@
 var distanceMultiplier = 10;
-var gasGiantDistanceMultiplier = 3.5;
-var sizeMultiplier = 2;
-var gasGiantSizeMultiplier = .5;
+var gasGiantDistanceMultiplier = 3.0;
+var sizeMultiplier = 1.8;
+var gasGiantSizeMultiplier = .35;
 
 var SolarSystem = {
   Sun : {
@@ -36,37 +36,37 @@ var SolarSystem = {
   },
   Mars : {
     radius : 0.532 * sizeMultiplier,
-    distance : 1.52 * distanceMultiplier * 2,
+    distance : 1.52 * distanceMultiplier * 1.7,
     year : 1.88,
     color : [ 1.0, 0.0, 0.0, 1.0 ]
   },
   Jupiter : {
-    radius : 11.21 * gasGiantSizeMultiplier, 
+    radius : 11.21 * gasGiantSizeMultiplier * .8, 
     distance : 5.20 * gasGiantDistanceMultiplier * 2.3,
     year : 11.9,
     color : [ 1.0, 153/255, 0.0, 1.0 ]
   },
   Saturn : {
-    radius : 9.45 * gasGiantSizeMultiplier,
+    radius : 9.45 * gasGiantSizeMultiplier *.8,
     distance : 9.58 * gasGiantDistanceMultiplier * 1.7,
     year : 29.4,
     color : [ 1.0, 1.0, 0.0, 1.0 ]
   },
   Uranus : {
     radius : 4.01 * gasGiantSizeMultiplier * 1.2,
-    distance : 19.20 * gasGiantDistanceMultiplier * 1.1,
+    distance : 19.20 * gasGiantDistanceMultiplier * 1.0,
     year : 83.7,
     color : [ 0.0, 0.1, 1.0, 1.0 ]
   },
   Neptune : {
     radius : 3.88 * gasGiantSizeMultiplier * 1.2,
-    distance : 30.05 * gasGiantDistanceMultiplier * .9,
+    distance : 30.05 * gasGiantDistanceMultiplier * .75,
     year : 163.7,
     color : [ 0.0, 0.0, 1.0, 1.0 ]
   },
   Pluto : {
     radius : 0.186 * gasGiantSizeMultiplier * 8,
-    distance : 39.48 * gasGiantDistanceMultiplier * .8,
+    distance : 39.48 * gasGiantDistanceMultiplier * .65,
     year : 247.9,
     color : [ 150/255, 75/255, 0.0, 1.0 ]
   }
