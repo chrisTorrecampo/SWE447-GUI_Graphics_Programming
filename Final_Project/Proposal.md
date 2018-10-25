@@ -1,7 +1,7 @@
 After looking at some THREE.js examples and documentation, I believe that the following project is both doable and showcasese my skills I learned from the semester
 
 Overview:
-I want to implement something similar to a THREE.js project where a user can rotate a city block with some sort of control. My version would be similar, but I intend to add more objects into the scene, such as a sun, possibly a bird or plane, and so on. These extra objects would rotate around the city block. In order to rotate the city, users would be able to use the mouse. Extra functionality can be added, such as buttons to change the time of day.
+I want to implement a city block in which a user can rotate and zoom to observe the scene. I intend to add more objects into the scene, such as a sun, a bird or plane, and so on. These extra objects would rotate around the city block as if they were flying around it. In order to rotate the city, users would be able to use the mouse. Extra functionality can be added, such as buttons to change the time of day.
 
 Steps:
 Week 1- Learn THREE.js
